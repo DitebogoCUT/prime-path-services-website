@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Path Services - Professional Multi-Service Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Prime Path Services</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Professional Multi-Service Solutions</h2>
+                <p>Reliable, efficient, and high-quality workmanship for residential and commercial clients</p>
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Plumbing & Drain Unblocking</h3>
+                    <p>Professional plumbing solutions including drain unblocking, repairs, and installations for residential and commercial properties.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Maintenance Services</h3>
+                    <p>Comprehensive maintenance services to keep your property in top condition, ensuring long-term durability and functionality.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Technical Support</h3>
+                    <p>Expert technical support for computer and office equipment, ensuring minimal downtime and maximum productivity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Office Equipment Installation</h3>
+                    <p>Professional installation and setup of office equipment, optimizing your workspace for efficiency and performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Landscaping</h3>
+                    <p>Complete landscaping services designed to enhance your property's aesthetic appeal and curb appeal.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>HVAC Installation</h3>
+                    <p>Professional HVAC installation and maintenance services for optimal climate control and energy efficiency.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Transportation Services</h3>
+                    <p>Reliable and efficient transportation solutions for your business and personal needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🪛</div>
+                    <h3>Woodworking</h3>
+                    <p>Custom woodworking and carpentry services bringing your vision to life with precision and craftsmanship.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📦</div>
+                    <h3>Supply Services</h3>
+                    <p>General supply services and computer equipment sourcing tailored to your specific business requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Prime Path Services</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Prime Path Services is a multi-service company dedicated to delivering reliable, efficient, and high-quality workmanship to both residential and commercial clients. With a hands-on approach and a commitment to service excellence, we work to build long-term relationships with our clients.</p>
+                    <h3>Our Commitment</h3>
+                    <ul class="commitment-list">
+                        <li>✓ Dependable Support</li>
+                        <li>✓ Timely Project Completion</li>
+                        <li>�� Versatile Service Offerings</li>
+                        <li>✓ Professional Excellence</li>
+                        <li>✓ Cost-Effective Solutions</li>
+                        <li>✓ Customer Satisfaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="plumbing">Plumbing & Drain Unblocking</option>
+                            <option value="maintenance">Maintenance Services</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="office-equipment">Office Equipment Installation</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="hvac">HVAC Installation</option>
+                            <option value="transportation">Transportation Services</option>
+                            <option value="woodworking">Woodworking</option>
+                            <option value="supply">Supply Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:info@primepathservices.com">info@primepathservices.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p><strong>Service Hours:</strong> Monday - Saturday, 7:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Prime Path Services. All rights reserved. | Professional Multi-Service Solutions</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
