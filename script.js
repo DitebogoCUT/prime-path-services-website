@@ -63,6 +63,34 @@ document.querySelectorAll('.service-card').forEach(card => {
     observer.observe(card);
 });
 
+// Animate stat numbers on scroll
+const statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('animated');
+            const target = parseInt(entry.target.getAttribute('data-value'));
+            animateValue(entry.target.querySelector('.stat-number'), 0, target, 2000);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-card').forEach(card => {
+    statsObserver.observe(card);
+});
+
+function animateValue(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        element.textContent = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
 // Mobile menu toggle (if needed in future)
 function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
@@ -74,4 +102,14 @@ function toggleMobileMenu() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Prime Path Services website loaded successfully');
+    
+    // Add hover effects to service cards
+    document.querySelectorAll('.service-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.15)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.08)';
+        });
+    });
 });
